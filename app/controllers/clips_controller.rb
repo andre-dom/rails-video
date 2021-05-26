@@ -3,7 +3,7 @@ class ClipsController < ApplicationController
 
   # GET /clips or /clips.json
   def index
-    @clips = current_user.clips.paginate(page: params[:page], per_page: 2)
+    @clips = current_user.clips.paginate(page: params[:page], per_page: 8)
   end
 
   # GET /clips/1 or /clips/1.json
