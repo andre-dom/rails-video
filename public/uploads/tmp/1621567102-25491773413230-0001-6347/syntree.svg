@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="511.0" height="420.0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<text style='fill: green; font-size: 20px; ; ;' x='254.0' y='389.0' text-decoration='' font-family='sans-serif'>multilingual</text>
+<text style='fill: green; font-size: 20px; ; ;' x='372.0' y='389.0' text-decoration='' font-family='sans-serif'>syntax trees</text>
+<text style='fill: green; font-size: 20px; ; ;' x='145.0' y='301.0' text-decoration='' font-family='sans-serif'>generates</text>
+<text style='fill: blue; font-size: 20px; ; ;' x='289.0' y='301.0' text-decoration='' font-family='sans-serif'>Adj</text>
+<line style='stroke:black; stroke-width:1;' x1='303' y1='362' x2='303' y2='322' />
+<text style='fill: blue; font-size: 20px; ; ;' x='413.0' y='301.0' text-decoration='' font-family='sans-serif'>NP</text>
+<polygon style='fill: none; stroke: black; stroke-width:1;' points='481 362 372 362 427 322' />
+<text style='fill: green; font-size: 20px; ; ;' x='10.0' y='213.0' text-decoration='' font-family='sans-serif'>RSyntaxTree</text>
+<text style='fill: blue; font-size: 20px; ; ;' x='183.0' y='213.0' text-decoration='' font-family='sans-serif'>V</text>
+<line style='stroke:black; stroke-width:1;' x1='190' y1='274' x2='190' y2='234' />
+<text style='fill: blue; font-size: 20px; ; ;' x='351.25' y='213.0' text-decoration='' font-family='sans-serif'>NP</text>
+<line style='stroke:black; stroke-width:1;' x1='303' y1='274' x2='365' y2='234' />
+<line style='stroke:black; stroke-width:1;' x1='427' y1='274' x2='365' y2='234' />
+<text style='fill: blue; font-size: 20px; ; ;' x='54.0' y='125.0' text-decoration='' font-family='sans-serif'>NP</text>
+<polygon style='fill: none; stroke: black; stroke-width:1;' points='125 186 10 186 68 146' />
+<text style='fill: blue; font-size: 20px; ; ;' x='264.125' y='125.0' text-decoration='' font-family='sans-serif'>VP</text>
+<line style='stroke:black; stroke-width:1;' x1='190' y1='186' x2='278' y2='146' />
+<line style='stroke:black; stroke-width:1;' x1='365' y1='186' x2='278' y2='146' />
+<text style='fill: blue; font-size: 20px; ; ;' x='165.8125' y='37.0' text-decoration='' font-family='sans-serif'>S</text>
+<line style='stroke:black; stroke-width:1;' x1='68' y1='98' x2='173' y2='58' />
+<line style='stroke:black; stroke-width:1;' x1='278' y1='98' x2='173' y2='58' />
+</svg>

@@ -1,0 +1,12 @@
+<div class="d-flex flex-column">
+  <h1 class="mt-3">Welcome to Clippper</h1>
+  <br>
+  <div>
+  <% if !user_signed_in? %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-outline-primary" %>
+  <% else %>
+    <%= link_to "Upload", new_clip_path, class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>

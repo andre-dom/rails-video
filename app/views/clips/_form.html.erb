@@ -1,0 +1,27 @@
+<%= form_with(model: clip) do |form| %>
+  <% if clip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clip.errors.count, "error") %> prohibited this clip from being saved:</h2>
+
+      <ul>
+        <% clip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video, class: "form-label mt-3" %>
+    <%= form.file_field :video, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Upload Clip", class: "btn btn-primary my-3"%>
+  </div>
+<% end %>

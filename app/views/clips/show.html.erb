@@ -1,0 +1,19 @@
+<%= javascript_pack_tag 'clipboard', 'data-turbolinks-track': 'reload' %>
+
+<p id="notice"><%= notice %></p>
+
+<h3><%= @clip.title %></h3>
+
+<video class="video-js" controls>
+  <source src="<%= @clip.video %>" type="video/mp4">
+</video>
+
+<input id="textToCopy" class="form-control w-25 my-3" value=<%= request.url %> readonly>
+<button onclick="copyToClipboard()" class="btn btn-outline-secondary">
+  Copy to clipboard
+</button>
+<%= link_to 'Edit', edit_clip_path(@clip) %>
+<%= link_to 'Back', clips_path %>
+<% if user_signed_in? and current_user.clips.friendly.exists?(params[:id])%>
+  <%= link_to 'Destroy', @clip, method: :delete, data: { confirm: 'Are you sure you want to delete this clip?' } %>
+<% end %>
