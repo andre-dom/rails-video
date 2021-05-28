@@ -3,7 +3,11 @@ class ClipsController < ApplicationController
 
   # GET /clips or /clips.json
   def index
-    @clips = current_user.clips.paginate(page: params[:page], per_page: 8)
+    if user_signed_in?
+      @clips = current_user.clips.paginate(page: params[:page], per_page: 8)
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /clips/1 or /clips/1.json
