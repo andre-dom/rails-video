@@ -5,13 +5,14 @@
 <div class="d-flex flex-column align-items-center">
   <h3><%= @clip.title %></h3>
 
-  <video class="video-js" controls>
-    <source src="<%= @clip.video %>" type="video/mp4">
-  </video>
+<!--  <video class="video-js" controls>-->
+<!--    <source src="<%#= @clip.video %>" type="video/mp4">-->
+<!--  </video>-->
+  <%= video_tag @clip.video %>
 
   <input id="textToCopy" class="form-control w-25 my-2" value=<%= request.url %> readonly>
   <button onclick="copyToClipboard()" class="btn btn-outline-secondary">
-    Copy to clipboard
+    Copy
   </button>
   <div class="mt-2">
     <%= link_to 'Back', clips_path, class: "btn btn-outline-primary" %>
