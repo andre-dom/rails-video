@@ -1,9 +1,10 @@
 class VideoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
   include CarrierWave::Video
   include CarrierWave::Video::Thumbnailer
+
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
@@ -34,6 +35,9 @@ class VideoUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process resize_to_fit: [50, 50]
   # end
+
+  # process resize_to_fit: [800, 800]
+  process encode_video: [ :mp4, resolution: "800x800", preserve_aspect_ratio: :width ]
 
 
   version :thumb do

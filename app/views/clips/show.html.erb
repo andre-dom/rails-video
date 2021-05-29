@@ -8,7 +8,7 @@
 <!--  <video class="video-js" controls>-->
 <!--    <source src="<%#= @clip.video %>" type="video/mp4">-->
 <!--  </video>-->
-  <%= video_tag @clip.video %>
+  <%= video_tag @clip.video, :controls => true %>
 
   <input id="textToCopy" class="form-control w-25 my-2" value=<%= request.url %> readonly>
   <button onclick="copyToClipboard()" class="btn btn-outline-secondary">
