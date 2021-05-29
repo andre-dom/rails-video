@@ -6,15 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <% if request.path == clips_path %>
-      <meta property="og:url"                content="<%= request.url %>" />
+    <meta property="og:url"                content="<%= request.url %>" />
+    <% if @clip %>
       <meta property="og:type"               content="video" />
-<!--      <meta property="og:title"              content="<%#= @clip.title %>" />-->
-<!--      <meta property="og:video"              content="<%#= "http://" + request.domain + @clip.video.url %>" />-->
+      <meta property="og:title"              content="<%= @clip.title %>" />
+      <meta property="og:video"              content="<%= @clip.video.url %>" />
     <% end %>
-
-    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
-    <link rel="stylesheet" href="">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
