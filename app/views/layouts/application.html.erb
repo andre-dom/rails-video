@@ -12,6 +12,13 @@
       <meta property="og:title"              content="<%= @clip.title %>" />
       <meta property="og:video"              content="<%= @clip.video.url %>" />
     <% end %>
+    <script>
+        let copyToClipboard = () => {
+            let posturl = document.getElementById("textToCopy");
+            posturl.select();
+            document.execCommand("copy");
+        }
+    </script>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
