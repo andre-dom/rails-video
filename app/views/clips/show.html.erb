@@ -3,15 +3,26 @@
 <div class="d-flex flex-column align-items-center">
   <h3><%= @clip.title %></h3>
 
-<!--  <video class="video-js" controls>-->
-<!--    <source src="<%#= @clip.video %>" type="video/mp4">-->
-<!--  </video>-->
   <%= video_tag @clip.video, :controls => true %>
 
-  <input id="textToCopy" class="form-control w-25 my-2" value=<%= request.url %> readonly>
-  <button onclick="copyToClipboard()" class="btn btn-outline-secondary">
-    Copy
-  </button>
+  <script>
+      let copyToClipboard = () => {
+          let text = document.getElementById("textToCopy");
+          text.select();
+          document.execCommand("copy");
+      }
+  </script>
+
+  <div class="row my-2">
+    <div class="col-auto">
+      <input id="textToCopy" class="form-control" value=<%= request.url %> readonly>
+    </div>
+    <div class="col-auto">
+      <button onclick="copyToClipboard()" class="btn btn-outline-secondary">
+        Copy
+      </button>
+    </div>
+  </div>
   <div class="mt-2">
     <%= link_to 'Back', clips_path, class: "btn btn-outline-primary" %>
     <% if user_signed_in? and current_user.clips.friendly.exists?(params[:id])%>

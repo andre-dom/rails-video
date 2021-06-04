@@ -26,10 +26,10 @@
             <%= link_to "Manage Account", edit_user_registration_path, class: "nav-link mr-2" %>
           </li>
           <li class="nav-item mx-1">
-            <%= link_to "Upload", new_clip_path, class: "btn btn-primary" %>
+            <%= link_to "Logout", logout_path, method: :delete, class: "nav-link" %>
           </li>
           <li class="nav-item mx-1">
-            <%= link_to "Logout", logout_path, method: :delete, class: "btn btn-outline-secondary" %>
+            <%= link_to "Upload", new_clip_path, class: "btn btn-primary" %>
           </li>
         <% else %>
           <li class="nav-item">
