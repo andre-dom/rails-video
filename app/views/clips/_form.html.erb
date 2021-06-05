@@ -1,6 +1,6 @@
 <%= form_with(model: clip) do |form| %>
   <% if clip.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-warning">
       <h2><%= pluralize(clip.errors.count, "error") %> prohibited this clip from being saved:</h2>
 
       <ul>
